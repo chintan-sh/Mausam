@@ -25,10 +25,10 @@ var Examples = require('Examples');
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}>
+            <IndexRoute component={Weather}/>
             <Route path="about" component={About}/>
             <Route path="examples" component={Examples}/>
-            <IndexRoute component={Weather}>
-            </IndexRoute>
+
         </Route>
     </Router>,
     document.getElementById("app")

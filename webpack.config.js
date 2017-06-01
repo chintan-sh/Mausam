@@ -18,6 +18,8 @@ module.exports = {
         Weather : 'app/components/Weather.jsx',
         About : 'app/components/About.jsx',
         Examples : 'app/components/Examples.jsx',
+        WeatherForm : 'app/components/WeatherForm.jsx',
+        WeatherMessage : 'app/components/WeatherMessage.jsx',
     },
     extensions  : [ '' , '.js', '.jsx'] // target files with extension (this will all be put in final bundle)
   },
