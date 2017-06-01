@@ -3,11 +3,20 @@
  */
 
 var React = require('react'); // residing inside node_modules (installed using npm)
+var WeatherForm = require('WeatherForm');
+var WeatherMessage = require('WeatherMessage');
 
 var Weather = React.createClass({
     render: function (){
         return(
-            <h3> Weather Component </h3>
+            <div>
+                <div>
+                    <WeatherForm/>
+                </div>
+                <div>
+                    <WeatherMessage/>
+                </div>
+            </div>
         );
     }
 });
