@@ -3,11 +3,17 @@
  */
 
 var React = require('react'); // residing inside node_modules (installed using npm)
+var {Link} = require('react-router');
 
 var Nav = React.createClass({
     render: function (){
         return(
-            <h3> Nav Component </h3>
+            <div>
+                <h3> Nav Component </h3>
+                <Link to="/"> Weather </Link>
+                <Link to="/about"> About </Link>
+                <Link to="/examples"> Examples </Link>
+            </div>
         );
     }
 });

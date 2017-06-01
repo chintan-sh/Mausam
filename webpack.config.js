@@ -1,6 +1,7 @@
 /**
  * Created by chintan on 5/31/17.
  */
+var webpack = require('webpack'); // remove if not using plugins param below
 
 // config file to generate bundle.js
 module.exports = {
@@ -14,6 +15,9 @@ module.exports = {
     alias : { // when we use 'require' in app.jsx etc - where to find corresponding files? define here
         Main : 'app/components/Main.jsx',
         Nav : 'app/components/Nav.jsx',
+        Weather : 'app/components/Weather.jsx',
+        About : 'app/components/About.jsx',
+        Examples : 'app/components/Examples.jsx',
     },
     extensions  : [ '' , '.js', '.jsx'] // target files with extension (this will all be put in final bundle)
   },
@@ -27,7 +31,11 @@ module.exports = {
         exclude : /(node_modules|bower_components|archives)/ // folders that we don't wanna parse
         // note : put "node_modules|" in exclude when you want to run on nodejs backend - if not, let webpack translate folder so that bundle.js can run on browser
     }]//end loaders
-  }
+  },
+  /* Optional */
+  plugins: [
+        new webpack.optimize.UglifyJsPlugin({minimize: true})
+  ]
 };
 
 

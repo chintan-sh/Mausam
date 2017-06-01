@@ -17,12 +17,18 @@ var React = require('react'); // residing inside node_modules (installed using n
 var ReactDOM = require('react-dom'); // residing inside node_modules (installed using npm)
 var {Route, Router, IndexRoute, hashHistory} = require('react-router'); // es6 destructuring syntax
 var Main = require('Main');
+var Weather = require('Weather');
+var About = require('About');
+var Examples = require('Examples');
 
 // for manipulating DOM (Processes JSX returned by <Intro> component which is then converted by Babel to ES5)
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={Main}>
-
+            <Route path="about" component={About}/>
+            <Route path="examples" component={Examples}/>
+            <IndexRoute component={Weather}>
+            </IndexRoute>
         </Route>
     </Router>,
     document.getElementById("app")
