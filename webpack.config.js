@@ -12,7 +12,8 @@ module.exports = {
   resolve : {
     root : __dirname,
     alias : { // when we use 'require' in app.jsx etc - where to find corresponding files? define here
-
+        Main : 'app/components/Main.jsx',
+        Nav : 'app/components/Nav.jsx',
     },
     extensions  : [ '' , '.js', '.jsx'] // target files with extension (this will all be put in final bundle)
   },

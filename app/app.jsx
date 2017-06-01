@@ -15,23 +15,15 @@
 * */
 var React = require('react'); // residing inside node_modules (installed using npm)
 var ReactDOM = require('react-dom'); // residing inside node_modules (installed using npm)
-
-// Testing ES6
-var objOne = {
-    name : 'Chintan',
-    location : 'Boston'
-};
-
-var objTwo = {
-    age : 25,
-    ...objOne
-};
-
-console.log(objTwo)
-
+var {Route, Router, IndexRoute, hashHistory} = require('react-router'); // es6 destructuring syntax
+var Main = require('Main');
 
 // for manipulating DOM (Processes JSX returned by <Intro> component which is then converted by Babel to ES5)
 ReactDOM.render(
-    <h1>Boilerplate App!</h1>,
+    <Router history={hashHistory}>
+        <Route path="/" component={Main}>
+
+        </Route>
+    </Router>,
     document.getElementById("app")
 );
