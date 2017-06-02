@@ -5,10 +5,20 @@
 var React = require('react'); // residing inside node_modules (installed using npm)
 
 var WeatherForm = React.createClass({
+    onFormSubmit : function (e) {
+      e.preventDefault();
+      var location = this.refs.location.value;
+      if(location.length > 0){
+          this.refs.location.value = "";
+          this.props.onSearch(location);
+      }else{
+          alert("Please enter valid location");
+      }
+    },
     render: function (){
         return(
-            <form>
-                <input type="text" placeholder="Enter your city" ref="city" />
+            <form onSubmit={this.onFormSubmit}>
+                <input type="text" placeholder="Enter your location" ref="location" />
                 <button> Get Weather </button>
             </form>
         );

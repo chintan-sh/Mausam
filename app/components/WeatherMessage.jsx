@@ -6,8 +6,10 @@ var React = require('react'); // residing inside node_modules (installed using n
 
 var WeatherMessage = React.createClass({
     render: function (){
+        var location = this.props.location;
+        var temp = this.props.temp;
         return(
-            <h3> Weather in your city today is - 63° F </h3>
+            <h3> Weather in your {location} today is {temp}° F </h3>
         );
     }
 });
