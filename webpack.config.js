@@ -20,6 +20,7 @@ module.exports = {
         Examples : 'app/components/Examples.jsx',
         WeatherForm : 'app/components/WeatherForm.jsx',
         WeatherMessage : 'app/components/WeatherMessage.jsx',
+        openWeatherMap : 'api/openWeatherMap.jsx',
     },
     extensions  : [ '' , '.js', '.jsx'] // target files with extension (this will all be put in final bundle)
   },
@@ -30,14 +31,14 @@ module.exports = {
           presets : ['react', 'es2015', 'stage-0'] // tells babel-loader to take our files & parse thru reactjs and then translate to es2015
         },
         test: /\.jsx?$/, // which file to target for conversion to es2015 (not same as resolve above)
-        exclude : /(node_modules|bower_components|archives)/ // folders that we don't wanna parse
+        exclude : /(node_modules|bower_components|archives|example)/ // folders that we don't wanna parse
         // note : put "node_modules|" in exclude when you want to run on nodejs backend - if not, let webpack translate folder so that bundle.js can run on browser
     }]//end loaders
   },
   /* Optional */
-  plugins: [
-        new webpack.optimize.UglifyJsPlugin({minimize: true})
-  ]
+  // plugins: [
+  //       new webpack.optimize.UglifyJsPlugin({minimize: true})
+  // ]
 };
 
 
