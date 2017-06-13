@@ -4,3 +4,7 @@
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
 
 Single Page Weather App
+
+
+
+Note : Install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) for Chrome before running
