@@ -35,6 +35,7 @@ module.exports = {
         // note : put "node_modules|" in exclude when you want to run on nodejs backend - if not, let webpack translate folder so that bundle.js can run on browser
     }]//end loaders
   },
+  devtool : 'cheap-module-eval-source-map' // for debugging (basically replaces bundle.js in browser with orig code
   /* Optional */
   // plugins: [
   //       new webpack.optimize.UglifyJsPlugin({minimize: true})
