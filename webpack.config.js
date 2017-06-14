@@ -5,7 +5,21 @@ var webpack = require('webpack'); // remove if not using plugins param below
 
 // config file to generate bundle.js
 module.exports = {
-  entry : './app/app.jsx', // starting point for webpack (it recursively goes to each file it finds in imports)
+  entry : [
+      'script!jquery/dist/jquery.min.js',
+      'script!foundation-sites/dist/foundation.min.js',
+      './app/app.jsx',
+  ], // starting point for webpack (it recursively goes to each file it finds in imports)
+
+  externals :{
+      jquery : 'jQuery'
+  },
+  plugins : [
+      new webpack.ProvidePlugin({
+          '$' : 'jquery',
+          'jQuery' : 'jquery'
+      })
+  ],
   output : {
     path : __dirname, // current directory
     filename : './js/bundle.js' // resultant file name with location (all js will reside in this file)

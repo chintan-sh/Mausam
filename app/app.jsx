@@ -21,6 +21,10 @@ var Weather = require('Weather');
 var About = require('About');
 var Examples = require('Examples');
 
+// load foundation
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
+
 // for manipulating DOM (Processes JSX returned by <Intro> component which is then converted by Babel to ES5)
 ReactDOM.render(
     <Router history={hashHistory}>
