@@ -15,7 +15,10 @@ var React = require('react'); // residing inside node_modules (installed using n
 // refactored the above code as it doesnt manage any state (called Stateless Functional Component)
 var Examples = (props) => {
         return(
-            <h3> Examples Component </h3>
+            <div>
+                    <h3> Examples </h3>
+                    <p> Welcome to examples page! </p>
+            </div>
         );
 };
 
