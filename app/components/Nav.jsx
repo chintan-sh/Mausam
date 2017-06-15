@@ -33,20 +33,30 @@ var Nav =  React.createClass({
         return (
             <div className="top-bar">
                 <div className="top-bar-left">
-                    <ul className="menu">
+                    <ul className="dropdown menu" data-dropdown-menu >
                         <li className="menu-text">Mausam</li>
-                        <li><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Get
-                            Weather </IndexLink></li>
+                        <li>
+                            <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Aaj ka Weather </IndexLink>
+                        </li>
                         <li><Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> About </Link>
                         </li>
                         <li><Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>
                             Examples </Link></li>
+                        {/*<li>*/}
+                            {/*<a href="#">Language</a>*/}
+                            {/*<ul className="menu vertical">*/}
+                                {/*<li><a href="#">EN</a></li>*/}
+                                {/*<li><a href="#">HI</a></li>*/}
+                            {/*</ul>*/}
+                        {/*</li>*/}
                     </ul>
                 </div>
                 <div className="top-bar-right">
                     <form onSubmit={this.onFormSubmit}>
                         <ul className="menu">
-                            <li><input type="search" ref="location" placeholder="Search"/></li>
+                            <li>
+                                <input type="search" ref="location" placeholder="Yahan se bhi dhundh sakte hain"/>
+                            </li>
                             <li>
                                 <button type="button" className="button">Search</button>
                             </li>

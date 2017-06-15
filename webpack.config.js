@@ -35,6 +35,7 @@ module.exports = {
         WeatherForm : 'app/components/WeatherForm.jsx',
         WeatherMessage : 'app/components/WeatherMessage.jsx',
         openWeatherMap : 'api/openWeatherMap.jsx',
+        ErrorModal : 'app/components/ErrorModal.jsx',
     },
     extensions  : [ '' , '.js', '.jsx'] // target files with extension (this will all be put in final bundle)
   },
