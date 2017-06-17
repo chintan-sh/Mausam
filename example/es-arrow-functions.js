@@ -20,10 +20,10 @@ var names = ['Mike', 'Steven', 'Elon'];
 // console.log(returnMe("Sam"));
 
 var person = {
-    name : 'Masoom',
+    name : 'Jen',
     greet : function(){
         names.forEach((name) => {
-            console.log(this.name + " says hx3 to " + name);
+            console.log(this.name + " says hello to " + name);
         });
     }
 }
