@@ -36,7 +36,7 @@ var Nav =  React.createClass({
                     <ul className="dropdown menu" data-dropdown-menu >
                         <li className="menu-text">Mausam</li>
                         <li>
-                            <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Aaj ka Weather </IndexLink>
+                            <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Weather </IndexLink>
                         </li>
                         <li><Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> About </Link>
                         </li>
@@ -55,7 +55,7 @@ var Nav =  React.createClass({
                     <form onSubmit={this.onFormSubmit}>
                         <ul className="menu">
                             <li>
-                                <input type="search" ref="location" placeholder="Yahan se bhi dhundh sakte hain"/>
+                                <input type="search" ref="location" placeholder="City, State or Zip"/>
                             </li>
                             <li>
                                 <button type="button" className="button">Search</button>

@@ -8,8 +8,8 @@ var ErrorModal = React.createClass({
     render: function () {
         return (
             <div id="error-modal" className="reveal tiny text-center" data-reveal="">
-                <h1>Sab theek to hain?</h1>
-                <p className="lead">Aap ne jo bhi type kiya wo ashleel ya galat hain. </p>
+                <h1>Something went wrong!</h1>
+                <p className="lead">An error occured while processing your request</p>
                 <p>Koi baat nahi, wapas try kar lo. Agli baar, dhyaan se. </p>
                 <button className="button" data-close="">
                     Sorry bhaisaab! Ab galti nahi hogi
@@ -20,3 +20,4 @@ var ErrorModal = React.createClass({
 });
 
 module.exports = ErrorModal;
+

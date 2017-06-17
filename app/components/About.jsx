@@ -17,7 +17,7 @@ var About = (props) => {
         return(
             <div>
                     <h1 className="text-center"> About  </h1>
-                    <p> Website bhaade par host kari hain on <a href="https://heroku.com" target="_blank">Heroku</a> aur baaki ka kaam inn tools pe hua hai: </p>
+                    <p> This app is hosted on <a href="https://heroku.com" target="_blank">Heroku</a> and its built using : </p>
                     <ul>
                         <li>
                             <a href="https://facebook.github.io/react" target="_blank">React</a>
@@ -41,7 +41,7 @@ var About = (props) => {
                             <a href="https://foundation.zurb.com/" target="_blank">Foundation</a>
                         </li>
                     </ul>
-                    <p> Jaan liya sab? Kuch faayda hua? </p>
+                    <p> You can find the source code on <a href="https://github.com/chintan-sh/Mausam" target="_blank">GitHub!</a> </p>
             </div>
         );
 };

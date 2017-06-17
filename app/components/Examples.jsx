@@ -18,19 +18,19 @@ var Examples = (props) => {
         return(
             <div>
                     <h1 className="text-center"> Examples </h1>
-                    <p> Slow logon ke liye examples :  </p>
+                    <p> Quick examples :  </p>
                     <ol>
                         <li>
-                            <Link to="/?location=Boston"> Boston </Link> (1st because main yahan rehta hoon)
+                            <Link to="/?location=Boston"> Boston </Link>
                         </li>
                         <li>
-                            <Link to="/?location=Mumbai"> Mumbai </Link> (2nd because yahan main rehta tha)
+                            <Link to="/?location=Mumbai"> Mumbai </Link>
                         </li>
                         <li>
-                            <Link to="/?location=SanFrancisco "> San Francisco </Link> (Yahan jana hain)
+                            <Link to="/?location=SanFrancisco "> San Francisco </Link>
                         </li>
                         <li>
-                            <Link to="/?location=London "> London </Link> (Uske baad yahan jana hain)
+                            <Link to="/?location=London "> London </Link>
                         </li>
                     </ol>
             </div>
