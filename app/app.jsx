@@ -26,7 +26,7 @@ require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
 // load custom css
-require('style!css!GlobalStyles');
+require('style!css!sass!GlobalStyles');
 
 // for manipulating DOM (Processes JSX returned by <Intro> component which is then converted by Babel to ES5)
 ReactDOM.render(
