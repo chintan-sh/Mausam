@@ -16,7 +16,7 @@ var React = require('react'); // residing inside node_modules (installed using n
 var About = (props) => {
         return(
             <div>
-                    <h1 className="text-center"> About  </h1>
+                    <h1 className="text-center page-title"> About  </h1>
                     <p> This app is hosted on <a href="https://heroku.com" target="_blank">Heroku</a> and its built using : </p>
                     <ul>
                         <li>
@@ -32,13 +32,16 @@ var About = (props) => {
                             <a href="https://babeljs.io" target="_blank">Babel</a>
                         </li>
                         <li>
-                            <a href="https://webpack.github.io/" target="_blank">Web Pack</a>
+                            <a href="https://webpack.github.io/" target="_blank">Webpack</a>
                         </li>
                         <li>
                             <a href="https://jquery.com" target="_blank">jQuery</a>
                         </li>
                         <li>
                             <a href="https://foundation.zurb.com/" target="_blank">Foundation</a>
+                        </li>
+                        <li>
+                            <a href="http://travis-ci.org/" target="_blank">Travis</a>
                         </li>
                     </ul>
                     <p> You can find the source code on <a href="https://github.com/chintan-sh/Mausam" target="_blank">GitHub!</a> </p>
