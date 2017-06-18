@@ -25,6 +25,9 @@ var Examples = require('Examples');
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
+// load custom css
+require('style!css!GlobalStyles');
+
 // for manipulating DOM (Processes JSX returned by <Intro> component which is then converted by Babel to ES5)
 ReactDOM.render(
     <Router history={hashHistory}>
