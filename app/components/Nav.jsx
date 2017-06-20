@@ -5,28 +5,14 @@
 var React = require('react'); // residing inside node_modules (installed using npm)
 var {Link, IndexLink} = require('react-router');
 
-// var Nav = React.createClass({
-//     render: function (){
-//         return(
-//             <div>
-//                 <h3> Nav Component </h3>
-//                 <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Weather </IndexLink>
-//                 <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> About </Link>
-//                 <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Examples </Link>
-//             </div>
-//         );
-//     }
-// });
-
 var Nav =  React.createClass({
     onFormSubmit : function (e) {
         e.preventDefault();
-        var location = this.refs.location.value;
+        var location = encodeURIComponent(this.refs.location.value);
+
         if(location.length > 0){
             this.refs.location.value = "";
-            this.props.onSearch(location);
-        }else{
-            alert("Please enter valid location");
+            window.location.hash = "#/?location=" + location;
         }
     },
     render: function () {
@@ -42,13 +28,6 @@ var Nav =  React.createClass({
                         </li>
                         <li><Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>
                             Examples </Link></li>
-                        {/*<li>*/}
-                            {/*<a href="#">Language</a>*/}
-                            {/*<ul className="menu vertical">*/}
-                                {/*<li><a href="#">EN</a></li>*/}
-                                {/*<li><a href="#">HI</a></li>*/}
-                            {/*</ul>*/}
-                        {/*</li>*/}
                     </ul>
                 </div>
                 <div className="top-bar-right">
@@ -58,7 +37,7 @@ var Nav =  React.createClass({
                                 <input type="search" ref="location" placeholder="City, State or Zip"/>
                             </li>
                             <li>
-                                <button type="button" className="button">Search</button>
+                                <button className="button">Search</button>
                             </li>
                         </ul>
                     </form>
@@ -83,6 +62,28 @@ module.exports = Nav;
 //
 //
 //         </div>
+
+// var Nav = React.createClass({
+//     render: function (){
+//         return(
+//             <div>
+//                 <h3> Nav Component </h3>
+//                 <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Weather </IndexLink>
+//                 <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> About </Link>
+//                 <Link to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}> Examples </Link>
+//             </div>
+//         );
+//     }
+// });
+//
+// {/*<li>*/}
+// {/*<a href="#">Language</a>*/}
+// {/*<ul className="menu vertical">*/}
+// {/*<li><a href="#">EN</a></li>*/}
+// {/*<li><a href="#">HI</a></li>*/}
+// {/*</ul>*/}
+// {/*</li>*/}
+
 //
 //
 //     );

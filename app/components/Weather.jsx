@@ -20,6 +20,8 @@ var Weather = React.createClass({
       this.setState({
           isLoading : true,
           errorMessage : undefined,
+          location : undefined,
+          temp : undefined,
       });
 
       openWeatherMap.getTemp(location).then(function(data){
@@ -28,6 +30,30 @@ var Weather = React.createClass({
           duplicateThis.setState({ isLoading : false, errorMessage: err.message});
       });
     },
+
+    // for fetching query string and directly showing weather for that location (ex : clicking on one of locations from example page)
+    componentDidMount : function(){
+        var location = this.props.location.query.location;
+
+        if(location && location.length > 0){
+            this.handleSearch(location);
+        }
+
+        // clear query string once result obtained
+        window.location.hash = '#/';
+    },
+    componentWillReceiveProps : function(newProps){
+        var location = newProps.location.query.location;
+
+        if(location && location.length > 0){
+            this.handleSearch(location);
+
+            // clear query string once result obtained
+            window.location.hash = '#/';
+        }
+
+    },
+
     render: function (){
         var {temp, isLoading, location, errorMessage} = this.state;
 
