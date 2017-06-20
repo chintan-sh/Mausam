@@ -6,6 +6,6 @@
 Weather App built using React, Node, SCSS & Foundation.
 
 ## Demo
-Click for [live](http://fathomless-lake-82439.herokuapp.com/#/?_k=e2v47c) demo
+You can check [live](http://fathomless-lake-82439.herokuapp.com/#/?_k=e2v47c) demo
 
 Note : Install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) on Chrome for Debugging
