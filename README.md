@@ -5,7 +5,7 @@
 [![Webpack Badge](https://cdn.rawgit.com/aleen42/badges/master/src/webpack.svg)](#) 
 [![React Badge](https://cdn.rawgit.com/aleen42/badges/master/src/react.svg)](#)
 [![Node.js](https://cdn.rawgit.com/aleen42/badges/master/src/node.svg)](#)
-[![Website](https://img.shields.io/website/https/searchneu.com.svg)](http://fathomless-lake-82439.herokuapp.com.com)
+[![Website](https://img.shields.io/website/https/searchneu.com.svg)](http://fathomless-lake-82439.herokuapp.com)
 
 Weather App built using React, Node, SCSS & Foundation.
 
