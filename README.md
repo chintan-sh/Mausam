@@ -12,7 +12,7 @@ Weather App built using React, Node, SCSS & Foundation.
 
 You can check the demo [here](http://aajkamausam.herokuapp.com).
 
-Note : Install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) on Chrome for Debugging
+Optional : Install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) on Chrome for Debugging
 
 
 ## License
